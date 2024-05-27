@@ -27,6 +27,7 @@ jobs:
         id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
+          path: "./docs/"
           if-no-files-found: error
         
   # Deploy job
