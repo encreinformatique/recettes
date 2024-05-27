@@ -1,2 +1,9 @@
 #!/usr/current/bin/php
-php ../docs/test.php ../docs/test.html
+$folder = dirname(__DIR__)'/content';
+$destination = dirname(__DIR__)'/docs';
+
+$files = scandir($folder, SCANDIR_SORT_DESCENDING);
+
+foreach ($files as $file) {
+    php $folder.'/'.$file $destination.'/'.str_replace('.php', '.html', $file);
+}
