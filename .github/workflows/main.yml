@@ -9,6 +9,9 @@ jobs:
         uses: actions/setup-node@v4
         #with:
         #  node-version:
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./docs/_site/"
       - name: Install NodeJS Packages
         run: npm i
       - name: Generates static CSS files
@@ -20,11 +23,6 @@ jobs:
           #coverage: xdebug, pcov
       - name: Generates static HTML files
         run: php bin/generator
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./docs/_site
-          name: github-pages
-          retention-days: 1
       - name: "Archive Artifact"
         run: |
           echo ::group::Archive artifact
@@ -39,7 +37,15 @@ jobs:
           shell: /usr/bin/sh -e {0}
           env:
             INPUT_PATH: ./docs/_site
-
+      - name: Upload artifact
+        id: upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.name }}
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: ${{ inputs.retention-days }}
+          if-no-files-found: error
+        
   # Deploy job
   deploy:
     # Add a dependency to the build job
