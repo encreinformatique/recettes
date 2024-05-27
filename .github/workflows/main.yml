@@ -20,20 +20,6 @@ jobs:
           #coverage: xdebug, pcov
       - name: Generates static HTML files
         run: php bin/generator
-      - name: "Archive Artifact"
-        run: |
-          echo ::group::Archive artifact
-          tar \
-            --dereference --hard-dereference \
-            --directory "$INPUT_PATH" \
-            -cvf "$RUNNER_TEMP/artifact.tar" \
-            --exclude=.git \
-            --exclude=.github \
-            .
-          echo ::endgroup::
-          shell: /usr/bin/sh -e {0}
-          env:
-            INPUT_PATH: ./docs/_site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "./docs/_site/"
@@ -41,9 +27,6 @@ jobs:
         id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.name }}
-          path: ${{ runner.temp }}/artifact.tar
-          retention-days: ${{ inputs.retention-days }}
           if-no-files-found: error
         
   # Deploy job
