@@ -1,0 +1,49 @@
+name: "Deployment"
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Npm
+        uses: actions/setup-node@v4
+        #with:
+        #  node-version:
+      - name: Install NodeJS Packages
+        run: npm i
+      - name: Generates static CSS files
+        run: npx tailwindcss -i ./docs/input.css -o ./docs/output.css
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          #extensions: intl, mbstring, soap, sqlite3, xml, apcu, dom
+          #coverage: xdebug, pcov
+      - name: Generates static HTML files
+        run: php bin/generator
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs/_site
+          name: github-pages
+          retention-days: 1
+      - run: |
+          echo ::group::Archive artifact
+          tar \
+            --dereference --hard-dereference \
+            --directory "$INPUT_PATH" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            .
+          echo ::endgroup::
+          shell: /usr/bin/sh -e {0}
+          env:
+            INPUT_PATH: ./docs/_site
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          name: github-pages
+          # Path of the directory containing the static assets.
+          path: /home/runner/work/_temp/artifact.tar
+          if-no-files-found: error
+          compression-level: 6
+          overwrite: false
