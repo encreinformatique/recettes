@@ -15,7 +15,7 @@ jobs:
           #extensions: intl, mbstring, soap, sqlite3, xml, apcu, dom
           #coverage: xdebug, pcov
       - name: Generates static HTML files
-        run: php bin/generator
+        run: bin/generator
       - name: Install NodeJS Packages
         run: npm i
       - name: Generates static CSS files
