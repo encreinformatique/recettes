@@ -11,6 +11,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run Website Generator
         uses: encreinformatique/static-generator@main
+        with:
+          header: "./src/header.php"
+          footer: "./src/footer.php"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "./docs/"
