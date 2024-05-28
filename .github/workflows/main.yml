@@ -9,10 +9,6 @@ jobs:
         uses: actions/setup-node@v4
         #with:
         #  node-version:
-      - name: Install NodeJS Packages
-        run: npm i
-      - name: Generates static CSS files
-        run: npx tailwindcss -i ./docs/input.css -o ./docs/output.css
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
@@ -20,6 +16,10 @@ jobs:
           #coverage: xdebug, pcov
       - name: Generates static HTML files
         run: php bin/generator
+      - name: Install NodeJS Packages
+        run: npm i
+      - name: Generates static CSS files
+        run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: "./docs/"
