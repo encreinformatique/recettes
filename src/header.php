@@ -2,6 +2,8 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <title>Recettes de cuisine</title>
+  <meta name="description" content="Recettes testées à la maison, pour ne pas oublier">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -16,6 +18,7 @@
     a:hover {color: rgb(220 38 38);}
     ul{margin: 0.25rem 2.75rem;}
     ul li::before {content: "✔️";margin-right: 12px;}
+    ul li > a {display: flex;align-items: center;height:48px;}
     footer {margin:1.75rem 0;}
   </style>
 </head>
