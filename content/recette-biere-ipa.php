@@ -1,9 +1,10 @@
-<h1 class="text-3xl font-bold mx-3 my-3">Recette de bière IPA</h1>
+<h1>Recette de bière IPA</h1>
 
-<p class="mx-3 my-1">
-    A venir.
+<p>
+    A venir. Il faut la laisser en garde plus longtemps qu'une autre bière pour que le houblon fasse son effet. Elle est à la 
+    limite du buvable dans le cas contraire.
 </p>
-<p class="mx-3 my-1">
-    IPA signifie <em>Indian Pale Ale</em>.
-    <a href="#" class="text-base text-blue-400 hover:text-pink-600 underline">just a fake link</a>
+<p>
+    IPA signifie <em>Indian Pale Ale</em>, un type de bière à fermentation haute, originaire d'Angleterre, caractérisé par une forte 
+    teneur en houblon qui lui confère un goût amer et des arômes floraux et fruités distinctifs.
 </p>
