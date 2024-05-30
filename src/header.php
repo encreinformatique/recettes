@@ -12,8 +12,8 @@
     h1 {font-size:1.875rem;font-weight:700;line-height:2.25rem;margin:0.75rem 2rem;}
     h2 {font-size:1.275rem;font-weight:700;line-height:1.75rem;margin:0.5rem 2rem;}
     p {margin:0.25rem 2rem;}
-    a {color: rgb(96 165 250 / var(--tw-text-opacity));}
-    a:hover {color: rgb(219 39 119 / var(--tw-text-opacity));}
+    a {color: rgb(22 101 199);}
+    a:hover {color: rgb(220 38 38);}
     footer {margin:0.25rem 2rem;}
   </style>
 </head>
