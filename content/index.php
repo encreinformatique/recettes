@@ -6,7 +6,7 @@
     <a href="./recette-biere-ipa">bière IPA</a>
 </p>
 <p id="pains">
-    <a href="./recette-pain-lait">pain au lait</a>
+    <a href="./recette-pain-lait">pain au lait</a><br>
     <a href="./recette-baguette">baguette</a>
 </p>
 
