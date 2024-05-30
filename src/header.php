@@ -12,9 +12,11 @@
     h1 {font-size:1.875rem;font-weight:700;line-height:2.25rem;margin:0.75rem 2rem;}
     h2 {font-size:1.275rem;font-weight:700;line-height:1.75rem;margin:0.5rem 2rem;}
     p {margin:0.25rem 2rem;}
-    a {color: rgb(22 101 199);}
+    a {color: rgb(22 101 199);text-decoration: underline;transition: 300ms;}
     a:hover {color: rgb(220 38 38);}
-    footer {margin:0.25rem 2rem;}
+    ul{margin: 0.25rem 2.75rem;}
+    ul li::before {content: "✔️";margin-right: 12px;}
+    footer {margin:1.75rem 0;}
   </style>
 </head>
 <body>
