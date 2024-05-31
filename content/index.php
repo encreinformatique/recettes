@@ -1,8 +1,8 @@
 <?php //include dirname(__DIR__).'/src/header.php'; ?>
 
-<img src="./img/banniere_accueil.webp" alt="superbes pains comme je les aime">
+<img src="./img/banniere_accueil.webp" alt="superbes pains comme je les aime" width="964" height="241">
 
-<h1>Hello!</h1>
+<h1>Bienvenue!</h1>
 
 <ul id="bieres">
     <li><a href="./recette-biere-ipa">bière IPA</a></li>
