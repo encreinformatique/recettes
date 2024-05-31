@@ -17,6 +17,7 @@
     a {color: rgb(22 101 199);text-decoration: underline;transition: 300ms;}
     a:hover {color: rgb(220 38 38);}
     ul{margin: 0.25rem 2.75rem;}
+    ul li{display: flex;align-items: center;}
     ul li::before {content: "✔️";margin-right: 12px;}
     ul li > a {display: flex;align-items: center;height:48px;}
     footer {margin:1.75rem 0;}
