@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Recettes de cuisine</title>
@@ -20,7 +20,7 @@
     ul li{display: flex;align-items: center;}
     ul li::before {content: "✔️";margin-right: 12px;}
     ul li > a {display: flex;align-items: center;height:48px;}
-    footer {margin:1.75rem 0;}
+    footer {margin:1.75rem 0;color:rgb(109 113 120);}
   </style>
 </head>
 <body>
