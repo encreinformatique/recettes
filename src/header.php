@@ -15,6 +15,8 @@
     h2 {font-size:1.275rem;font-weight:700;line-height:1.75rem;margin:0.5rem 2rem;}
     p {margin:0.25rem 2rem;}
     a {color: rgb(22 101 199);text-decoration: underline;transition: 300ms;}
+    a.sitename{text-decoration:none;}
+    a.sitename::before {content: "";height: 90px;width: 90px;display: inline-block;background: url('./apple-touch-icon.png');background-size: contain;margin-right: 16px;}
     a:hover {color: rgb(220 38 38);}
     img{width: 964px;border-radius: 0 16px 16px 0;box-shadow: 1px 2px 5px rgba(30, 30, 30, 0.3);max-width: 100%;}
     ul{margin: 0.25rem 2.75rem;}
