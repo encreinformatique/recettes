@@ -1,5 +1,7 @@
 <?php //include dirname(__DIR__).'/src/header.php'; ?>
 
+<img src="./img/banniere_accueil.webp" alt="superbes pains comme je les aime">
+
 <h1>Hello!</h1>
 
 <ul id="bieres">
